@@ -1,0 +1,638 @@
+/*----------------------------------------------------------------------------------*/
+/*  Vars
+/*----------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------*/
+/*  Sprites
+/*----------------------------------------------------------------------------------*/
+/* line 50, sprites/social/*.png */
+.social-sprite, .social-linked-in, .social-twitter {
+  background: url('http://192.168.0.22/wp-content/themes/molten-group/assets/img/sprites/social-s7a7e1c6613.png') no-repeat;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.social-linked-in {
+  background-position: 0 -48px;
+}
+
+/* line 60, ../../../../../../../../var/lib/gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.social-twitter {
+  background-position: 0 0;
+}
+
+/* line 52, ../scss/screen.scss */
+.social-sprite, .social-linked-in, .social-twitter {
+  height: 48px;
+  width: 48px;
+  display: inline-block;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Utilities
+/*----------------------------------------------------------------------------------*/
+/* line 62, ../scss/screen.scss */
+.pull-right {
+  float: right;
+}
+
+/* line 65, ../scss/screen.scss */
+.pull-left {
+  float: left;
+}
+
+/* line 69, ../scss/screen.scss */
+ul {
+  list-style-image: url("../img/bullet-point.png");
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Headings
+/*----------------------------------------------------------------------------------*/
+/* line 75, ../scss/screen.scss */
+body {
+  font-family: "ffOpenSans-Regular", "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 80, ../scss/screen.scss */
+h1,
+h1.entry-title {
+  font-family: "ffOpenSans-Light", "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2.5em;
+}
+
+/* line 84, ../scss/screen.scss */
+h2 {
+  font-family: "ffOpenSans-Regular", "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.7em;
+  line-height: 1.3em;
+}
+
+/* line 89, ../scss/screen.scss */
+h3 {
+  font-family: "ffOpenSans-Light", "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.4em;
+}
+
+/* line 94, ../scss/screen.scss */
+h4 {
+  font-family: "ffOpenSans-Bold", "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/* line 98, ../scss/screen.scss */
+h5 {
+  font-family: "ffOpenSans-Light", "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Modified styles
+/*----------------------------------------------------------------------------------*/
+/* line 105, ../scss/screen.scss */
+a {
+  border: none;
+}
+
+/* line 109, ../scss/screen.scss */
+p {
+  font-family: "ffOpenSans-Regular";
+}
+
+/* line 112, ../scss/screen.scss */
+#logo {
+  margin: 15px 0 14px 0;
+}
+
+/* line 118, ../scss/screen.scss */
+#primary-nav ul a {
+  height: 75px;
+  line-height: 75px;
+}
+/* line 123, ../scss/screen.scss */
+#primary-nav ul li .sep {
+  top: 27px;
+}
+/* line 128, ../scss/screen.scss */
+#primary-nav ul li:hover ul, #primary-nav ul li.sfHover ul {
+  top: 75px;
+}
+
+/* line 139, ../scss/screen.scss */
+#container #header .top-header-wrapper {
+  background-color: #e5e5e5;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+/* line 150, ../scss/screen.scss */
+body.archive .post,
+body.page-template-template-home-blog-php .post {
+  width: 280px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Footer
+/*----------------------------------------------------------------------------------*/
+/* line 157, ../scss/screen.scss */
+#footer {
+  background-color: #e5e5e5;
+}
+/* line 159, ../scss/screen.scss */
+#footer .footer-widgets {
+  color: #505252;
+  background-color: #e5e5e5;
+  background: none;
+}
+/* line 166, ../scss/screen.scss */
+#footer .footer-widgets .zilla_tweet_widget li span a {
+  color: #505252;
+}
+/* line 172, ../scss/screen.scss */
+#footer .footer-widgets .widget {
+  background: none;
+}
+/* line 174, ../scss/screen.scss */
+#footer .footer-widgets .widget .widget-title {
+  font-weight: 100;
+  font-size: 1.5em;
+  text-transform: none;
+  color: #474747;
+  margin-bottom: 30px;
+}
+/* line 193, ../scss/screen.scss */
+#footer .footer-widgets.second a {
+  color: #474747;
+}
+/* line 196, ../scss/screen.scss */
+#footer .footer-widgets.second .widget_recent_entries {
+  background: url("../img/small-rss.png") right top no-repeat;
+}
+/* line 199, ../scss/screen.scss */
+#footer .footer-widgets.second .zilla_tweet_widget {
+  background: url("../img/small-twitter.png") right top no-repeat;
+}
+/* line 211, ../scss/screen.scss */
+#footer .footer-widgets li {
+  border-bottom: 1px solid #ccd2e0;
+}
+/* line 213, ../scss/screen.scss */
+#footer .footer-widgets li a {
+  font: 1em/1.571em "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 217, ../scss/screen.scss */
+#footer .footer-widgets .social-footer {
+  text-align: center;
+}
+/* line 219, ../scss/screen.scss */
+#footer .footer-widgets .social-footer a:first-child {
+  margin-right: 10px;
+}
+/* line 225, ../scss/screen.scss */
+#footer .footer-logo .inner {
+  text-align: center;
+  background: url("../img/single_dotted_h.png") top repeat-x;
+}
+/* line 230, ../scss/screen.scss */
+#footer .footer-bottom {
+  background-color: #ba1822;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Sidebar / Widgets
+/*----------------------------------------------------------------------------------*/
+/* line 241, ../scss/screen.scss */
+.aside .widget {
+  padding: 40px 10px 20px 10px;
+  margin: 0 20px 20px 20px;
+  background-repeat: repeat-x;
+  color: white;
+}
+/* line 247, ../scss/screen.scss */
+.aside .widget .widget-title {
+  left: 0;
+}
+/* line 260, ../scss/screen.scss */
+.aside .widget.widget_search {
+  padding: 0;
+}
+/* line 262, ../scss/screen.scss */
+.aside .widget.widget_search #s {
+  width: 92.55%;
+  padding: 3.725% 10px 7px 3.725%;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Content Pages
+/*----------------------------------------------------------------------------------*/
+/* line 273, ../scss/screen.scss */
+.entry-content {
+  padding-top: 20px;
+}
+/* line 276, ../scss/screen.scss */
+.entry-content h2 {
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Top nav styles
+/*----------------------------------------------------------------------------------*/
+/* line 289, ../scss/screen.scss */
+#top-nav ul {
+  margin: 0px;
+}
+/* line 291, ../scss/screen.scss */
+#top-nav ul li {
+  font-size: 0.8em;
+  float: left;
+}
+/* line 294, ../scss/screen.scss */
+#top-nav ul li a {
+  color: #474747;
+  border: none;
+}
+/* line 298, ../scss/screen.scss */
+#top-nav ul li .sep {
+  color: #474747;
+  margin: 0 5px;
+}
+/* line 304, ../scss/screen.scss */
+#top-nav ul li:last-child .sep, #top-nav ul li.last .sep {
+  display: none;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Custom page boxes
+/*----------------------------------------------------------------------------------*/
+/* line 315, ../scss/screen.scss */
+.feature-content.type1 {
+  background-color: rgba(254, 255, 0, 0.5);
+}
+
+/* line 318, ../scss/screen.scss */
+.feature-content.type2 {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+/* line 321, ../scss/screen.scss */
+.feature-content.type3 {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Shallow template styles
+/*----------------------------------------------------------------------------------*/
+/* line 331, ../scss/screen.scss */
+body.page-template-template-full-width-shallow-php #primary, body.page-template-templatestemplate-people-php #primary {
+  width: 960px !important;
+}
+/* line 334, ../scss/screen.scss */
+body.page-template-template-full-width-shallow-php #content, body.page-template-templatestemplate-people-php #content {
+  background: url(images/1col_back.png) repeat-y;
+}
+/* line 337, ../scss/screen.scss */
+body.page-template-template-full-width-shallow-php .type-page, body.page-template-templatestemplate-people-php .type-page {
+  width: 920px;
+}
+
+/* line 343, ../scss/screen.scss */
+.full-width-shallow {
+  width: 940px!important;
+}
+
+/* line 347, ../scss/screen.scss */
+#feature-wrapper.shallow {
+  height: 250px;
+}
+
+/* line 352, ../scss/screen.scss */
+.shallow .feature .feature-content {
+  top: 34%;
+  width: 44%;
+  height: 80px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-top: 10px solid #ba1822;
+}
+/* line 358, ../scss/screen.scss */
+.shallow .feature .feature-content h2 {
+  font: 100 1em/1.571em "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/* line 360, ../scss/screen.scss */
+.shallow .feature .feature-content h2 a {
+  background: none;
+  box-shadow: none;
+  letter-spacing: 4px;
+  height: 69px;
+  line-height: 69px;
+}
+
+/* line 373, ../scss/screen.scss */
+#content .page-header {
+  background: url("../img/single_dotted_h.png") bottom repeat-x;
+  padding-bottom: 20px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Case Studies Box Template
+/*----------------------------------------------------------------------------------*/
+/* line 382, ../scss/screen.scss */
+.latest-case-studies {
+  color: white;
+  background-color: #ba1822;
+  border-top: 3px solid #202222;
+  position: relative;
+  padding: 40px 20px 20px 20px;
+  margin-top: 50px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 390, ../scss/screen.scss */
+.latest-case-studies h3 {
+  position: absolute;
+  top: 0px;
+  left: 19px;
+  font-weight: bold;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: white;
+  background: #202222;
+  padding: 1px 7px;
+  font-family: "Helvetica Neue", Helvetica, Sans-serif;
+}
+/* line 402, ../scss/screen.scss */
+.latest-case-studies .case-study {
+  width: 260px;
+  display: inline-block;
+  margin-right: 40px;
+}
+/* line 406, ../scss/screen.scss */
+.latest-case-studies .case-study h4 {
+  background: url("../img/pencil.png") left top no-repeat;
+  background-position-y: 3px;
+  padding-left: 25px;
+  color: white;
+  margin-bottom: 20px;
+}
+/* line 413, ../scss/screen.scss */
+.latest-case-studies .case-study p {
+  margin-left: 25px;
+}
+/* line 416, ../scss/screen.scss */
+.latest-case-studies .case-study.last {
+  margin-right: 0;
+}
+/* line 421, ../scss/screen.scss */
+.latest-case-studies span a {
+  color: white;
+  text-decoration: underline;
+}
+/* line 424, ../scss/screen.scss */
+.latest-case-studies span a:visited {
+  color: white;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Clients / People Template
+/*----------------------------------------------------------------------------------*/
+/* line 438, ../scss/screen.scss */
+.page-template-templatestemplate-clients-php #content,
+.page-template-templatestemplate-people-php #content {
+  background: none;
+}
+
+/* line 446, ../scss/screen.scss */
+.clients .type-page,
+.people .type-page {
+  width: 920px;
+}
+/* line 448, ../scss/screen.scss */
+.clients .type-page h1.entry-title,
+.people .type-page h1.entry-title {
+  display: inline-block;
+  width: auto;
+}
+/* line 452, ../scss/screen.scss */
+.clients .type-page .tagline-text,
+.people .type-page .tagline-text {
+  margin-left: 20px;
+}
+
+/* line 458, ../scss/screen.scss */
+.close {
+  float: right;
+  background: url("../img/close_x.png") no-repeat;
+  width: 35px;
+  height: 35px;
+}
+
+/* line 466, ../scss/screen.scss */
+.clients .clients-container {
+  background: url("../img/single_dotted_h.png") top repeat-x;
+  padding-top: 4px;
+}
+/* line 469, ../scss/screen.scss */
+.clients .clients-container .client-container {
+  width: 202px;
+  height: 160px;
+  background-color: #e5e5e5;
+  padding: 5px;
+}
+/* line 474, ../scss/screen.scss */
+.clients .clients-container .client-container img {
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+}
+/* line 481, ../scss/screen.scss */
+.clients .client-info {
+  display: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: url("../img/single_dotted_h.png") top repeat-x;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 488, ../scss/screen.scss */
+.clients .client-info .header {
+  overflow: hidden;
+  *zoom: 1;
+  padding: 0px;
+}
+/* line 491, ../scss/screen.scss */
+.clients .client-info .header h3 {
+  color: #ba1822;
+  font-size: 2em;
+  float: left;
+}
+/* line 497, ../scss/screen.scss */
+.clients .client-info .content {
+  float: left;
+  width: 50%;
+}
+/* line 500, ../scss/screen.scss */
+.clients .client-info .content h4 {
+  margin-bottom: 20px;
+}
+/* line 507, ../scss/screen.scss */
+.clients .client-info img {
+  margin-left: 40px;
+  float: left;
+}
+
+/* line 515, ../scss/screen.scss */
+.people .entry-content {
+  padding: 0;
+}
+/* line 518, ../scss/screen.scss */
+.people .team-selector {
+  text-transform: uppercase;
+  padding: 19px 0 19px 0;
+}
+/* line 523, ../scss/screen.scss */
+.people .person-info {
+  display: none;
+  overflow: hidden;
+  *zoom: 1;
+  background: url("../img/single_dotted_h.png") bottom repeat-x;
+  padding-top: 20px;
+}
+/* line 528, ../scss/screen.scss */
+.people .person-info .header {
+  overflow: hidden;
+  *zoom: 1;
+  margin-bottom: 25px;
+}
+/* line 531, ../scss/screen.scss */
+.people .person-info .header h2 {
+  color: #ba1822;
+  float: left;
+  margin-bottom: 0;
+  font-size: 2.3em;
+  font-family: "OpenSans-Light";
+}
+/* line 538, ../scss/screen.scss */
+.people .person-info .header .position {
+  clear: both;
+  float: left;
+  font-size: 1.3em;
+}
+/* line 546, ../scss/screen.scss */
+.people .person-info img {
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 20px;
+}
+/* line 552, ../scss/screen.scss */
+.people .people-container {
+  background: url("../img/single_dotted_h.png") top repeat-x;
+  padding-top: 4px;
+}
+/* line 555, ../scss/screen.scss */
+.people .people-container .person-container {
+  padding: 5px;
+  border-bottom: 3px solid #202222;
+  padding-bottom: 20px;
+}
+/* line 559, ../scss/screen.scss */
+.people .people-container .person-container .wrapper {
+  position: relative;
+}
+/* line 562, ../scss/screen.scss */
+.people .people-container .person-container .more-info-hover {
+  display: none;
+  position: absolute;
+  top: 5;
+  background-color: #ba1822;
+  z-index: 999;
+  color: white;
+  font-size: 1.3em;
+}
+/* line 570, ../scss/screen.scss */
+.people .people-container .person-container .more-info-hover .inner {
+  padding: 20px;
+  width: auto;
+}
+/* line 573, ../scss/screen.scss */
+.people .people-container .person-container .more-info-hover .inner p {
+  width: auto;
+}
+/* line 578, ../scss/screen.scss */
+.people .people-container .person-container h3 {
+  color: #ba1822;
+  margin-bottom: 2px;
+}
+/* line 582, ../scss/screen.scss */
+.people .people-container .person-container img {
+  cursor: pointer;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Shortcodes
+/*----------------------------------------------------------------------------------*/
+/* line 596, ../scss/screen.scss */
+.call-to-action-sc {
+  padding: 20px;
+  background-color: #ba1822;
+  margin: 5px 0;
+}
+/* line 600, ../scss/screen.scss */
+.call-to-action-sc .cta-inner {
+  color: white;
+  padding-left: 40px;
+  font-size: 1.4em;
+  line-height: 1.3em;
+  background: 0 4px url("../img/right-arrow.png") no-repeat;
+}
+/* line 606, ../scss/screen.scss */
+.call-to-action-sc .cta-inner a {
+  color: white;
+  font-family: "ffOpenSans-Bold";
+}
+
+/* line 612, ../scss/screen.scss */
+.quote-sc {
+  padding: 20px;
+  background-color: #efeeed;
+  margin: 5px 0;
+}
+/* line 616, ../scss/screen.scss */
+.quote-sc .q-inner {
+  font-family: "ffOpenSans-LightItalic";
+  color: #505252;
+  padding-left: 40px;
+  font-size: 2em;
+  line-height: 1.5em;
+  background: 0 10px url("../img/speech-bubble.png") no-repeat;
+}
+/* line 623, ../scss/screen.scss */
+.quote-sc .q-inner a {
+  color: white;
+}
+
+/* line 629, ../scss/screen.scss */
+.download-sc {
+  padding: 20px;
+  background-color: #efeeed;
+  margin: 5px 0;
+}
+/* line 634, ../scss/screen.scss */
+.download-sc .d-inner {
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 636, ../scss/screen.scss */
+.download-sc .d-inner img {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Misc
+/*----------------------------------------------------------------------------------*/
+/* line 657, ../scss/screen.scss */
+.currentFilter {
+  color: #a3a6a7;
+}

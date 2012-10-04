@@ -1,0 +1,132 @@
+/*----------------------------------------------------------------------------------*/
+/*  Little screens
+/*----------------------------------------------------------------------------------*/
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-width: 480px) {
+  /* line 7, ../scss/responsive.scss */
+  #feature-wrapper.shallow {
+    height: 200px !important;
+  }
+
+  /* line 12, ../scss/responsive.scss */
+  .clients .client-info .content {
+    float: left;
+    width: 100%;
+  }
+
+  /* line 18, ../scss/responsive.scss */
+  .case-study {
+    width: auto !important;
+    margin-right: 0;
+  }
+
+  /* line 24, ../scss/responsive.scss */
+  .footer-widgets .col {
+    float: none;
+    margin: 10px auto;
+  }
+}
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* line 33, ../scss/responsive.scss */
+  #feature-wrapper.shallow {
+    height: 200px !important;
+  }
+
+  /* line 36, ../scss/responsive.scss */
+  .case-study {
+    width: auto !important;
+    margin-right: 0;
+  }
+
+  /* line 41, ../scss/responsive.scss */
+  .footer-widgets .col {
+    float: none;
+    margin: 10px auto;
+  }
+}
+/* Desktops and laptops ----------- */
+@media only screen and (max-width: 1000px) {
+  /* line 50, ../scss/responsive.scss */
+  #feature-wrapper.shallow {
+    height: 200px !important;
+  }
+
+  /* line 54, ../scss/responsive.scss */
+  .shallow .feature-content {
+    top: 50%;
+  }
+
+  /* line 58, ../scss/responsive.scss */
+  .case-study {
+    width: auto !important;
+    margin-right: 0;
+  }
+
+  /* line 65, ../scss/responsive.scss */
+  body.page-template-template-full-width-shallow-php #primary, body.page-template-templatestemplate-people-php #primary {
+    width: 641px !important;
+  }
+  /* line 68, ../scss/responsive.scss */
+  body.page-template-template-full-width-shallow-php #content, body.page-template-templatestemplate-people-php #content {
+    background: url(images/2col_back_single.png) repeat-y;
+  }
+  /* line 71, ../scss/responsive.scss */
+  body.page-template-template-full-width-shallow-php .type-page, body.page-template-templatestemplate-people-php .type-page {
+    width: 601px;
+  }
+
+  /* line 79, ../scss/responsive.scss */
+  .clients .type-page,
+  .people .type-page {
+    width: 601px;
+  }
+
+  /* line 84, ../scss/responsive.scss */
+  .footer-widgets .col {
+    float: none;
+    margin: 10px auto;
+  }
+}
+@media only screen and (max-width: 660px) {
+  /* line 92, ../scss/responsive.scss */
+  #feature-wrapper.shallow {
+    height: 200px !important;
+  }
+
+  /* line 96, ../scss/responsive.scss */
+  .shallow .feature-content {
+    top: 50%;
+  }
+
+  /* line 100, ../scss/responsive.scss */
+  .latest-case-studies .case-study {
+    width: auto !important;
+    margin-right: 0;
+  }
+
+  /* line 109, ../scss/responsive.scss */
+  body.page-template-template-full-width-shallow-php #primary, body.page-template-templatestemplate-people-php #primary {
+    width: 321px !important;
+  }
+  /* line 112, ../scss/responsive.scss */
+  body.page-template-template-full-width-shallow-php #content, body.page-template-templatestemplate-people-php #content {
+    background: url(images/3col_back.png) repeat-y;
+  }
+  /* line 115, ../scss/responsive.scss */
+  body.page-template-template-full-width-shallow-php .type-page, body.page-template-templatestemplate-people-php .type-page {
+    width: 281px;
+  }
+
+  /* line 122, ../scss/responsive.scss */
+  .clients .type-page,
+  .people .type-page {
+    width: 281px;
+  }
+
+  /* line 127, ../scss/responsive.scss */
+  .footer-widgets .col {
+    float: none;
+    margin: 10px auto;
+  }
+}

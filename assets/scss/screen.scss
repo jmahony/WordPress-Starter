@@ -1,0 +1,659 @@
+@import "compass/utilities/general/clearfix";
+@import "compass/css3/";
+
+/*----------------------------------------------------------------------------------*/
+/*  Vars
+/*----------------------------------------------------------------------------------*/
+
+$grey 			: #e5e5e5;
+$darkGrey 		: #474747;
+$red 			: #ba1822;
+$white			: #FFFFFF;
+$borderGrey 	: #ccd2e0;
+$borderBlack	: #202222;
+$textColor		: #505252;
+$lightGrey		: #a3a6a7;
+$lighterGrey	: #efeeed;
+
+$headingSize    : 1.5em;
+$textSize   	: 1em;
+$textLineHeight : 1.571em;
+
+$font : "Helvetica Neue-Light",
+		"Helvetica Neue Light", 
+		"Helvetica Neue",
+		Helvetica,
+		Arial,
+		sans-serif;
+
+$oneColBg   : url(images/1col_back.png);
+$twoColBg   : url(images/2col_back_single.png) repeat-y;
+$threeColBg : url(images/3col_back_dark.png) repeat-y;
+
+$doubleDotted  : url('../img/double_dotted.png');
+$singleDottedH : url('../img/single_dotted_h.png');
+$singleDottedV : url('../img/single_dotted_v.png');
+
+$close		  : url('../img/close_x.png');
+$smallRss     : url('../img/small-rss.png');
+$smallTwitter : url('../img/small-twitter.png');
+$pencil		  : url('../img/pencil.png');
+$rightArrow	  : url('../img/right-arrow.png');
+$speechBubble : url('../img/speech-bubble.png');
+$bulletImage  : url('../img/bullet-point.png');
+
+/*----------------------------------------------------------------------------------*/
+/*  Sprites
+/*----------------------------------------------------------------------------------*/
+
+@import "sprites/social/*.png";
+@include all-social-sprites;
+
+.social-sprite {
+	height:48px;
+	width:48px;
+	display:inline-block;
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Utilities
+/*----------------------------------------------------------------------------------*/
+
+.pull-right {
+	float:right;
+}
+.pull-left {
+	float:left;
+}
+
+ul {
+	list-style-image: $bulletImage;
+}
+/*----------------------------------------------------------------------------------*/
+/*  Headings
+/*----------------------------------------------------------------------------------*/
+body {
+	font-family:"ffOpenSans-Regular", $font;
+}
+
+h1,
+h1.entry-title {
+	font-family:"ffOpenSans-Light", $font;
+	font-size:2.5em;
+}
+h2 {
+	font-family:"ffOpenSans-Regular", $font;
+	font-size:1.7em;
+	line-height:1.3em;
+}
+h3 {
+	font-family:"ffOpenSans-Light", $font;
+	letter-spacing:1px;
+	font-size:1.4em;
+}
+h4 {
+	font-family:"ffOpenSans-Bold", $font;
+	font-size:1em;
+}
+h5 {
+	font-family:"ffOpenSans-Light", $font;
+	font-size:1em;
+}
+/*----------------------------------------------------------------------------------*/
+/*  Modified styles
+/*----------------------------------------------------------------------------------*/
+a {
+	border:none;
+}
+
+p {
+	font-family:"ffOpenSans-Regular";
+}
+#logo {
+	margin: 15px 0 14px 0;
+}
+
+#primary-nav {
+	ul { 
+		a {
+			height: 75px;
+			line-height: 75px;
+		}
+		li {
+			.sep {
+				top:27px;
+			}
+			&:hover, 
+			&.sfHover {
+				ul {
+					top: 75px;
+				}
+			}
+
+		}
+	}
+}
+
+#container {
+	#header {
+		.top-header-wrapper {
+			background-color: $grey;
+			padding-top: 20px;
+			padding-bottom: 5px;
+		}
+	}
+}
+
+
+body.archive,
+body.page-template-template-home-blog-php {
+	.post {
+		width: 280px;
+	}
+}
+/*----------------------------------------------------------------------------------*/
+/*  Footer
+/*----------------------------------------------------------------------------------*/
+#footer {
+	background-color: $grey;
+	.footer-widgets {
+		color: $textColor;
+		background-color: $grey;
+		background:none;
+		.zilla_tweet_widget {
+			li {
+				span {
+					a {
+						color:$textColor;
+					}
+				}
+			}
+		}
+		.widget {
+			background:none;
+			.widget-title {
+				font-weight: 100;
+				font-size: $headingSize;
+				text-transform: none;
+				color: $darkGrey;
+				margin-bottom:30px;
+			}
+		}
+
+		// &.first {
+		//	background-color: $red;
+		//	.reverse_widget_text {
+		//		text-align: center;
+		//		.widget-title {
+		//			color: $grey;
+		//		}
+		//	}
+		//}
+		&.second {
+			a {
+				color: $darkGrey;
+			}
+			.widget_recent_entries {
+				background: $smallRss right top no-repeat;
+			}
+			.zilla_tweet_widget {
+				background: $smallTwitter right top no-repeat;
+			}
+			.inner {
+			}
+		}
+
+		&.third {
+			.inner {
+			}
+		}
+
+		li {
+			border-bottom:1px solid $borderGrey;
+			a {
+				font: #{$textSize}/#{$textLineHeight} $font;;
+			}
+		}
+		.social-footer {
+			text-align: center;
+			a:first-child {
+				margin-right:10px;
+			}
+		}
+	}
+	.footer-logo {
+		.inner {
+			text-align:center;
+			background: $singleDottedH top repeat-x;
+		}
+	}
+	.footer-bottom {
+		background-color:$red;
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Sidebar / Widgets
+/*----------------------------------------------------------------------------------*/
+
+.aside {
+
+	.widget {
+		padding:40px 10px 20px 10px;
+		margin: 0 20px 20px 20px;
+		background-repeat: repeat-x;
+		color: $white;
+
+		.widget-title {
+			left:0;
+		}
+		//&:nth-child(even) {
+		//	background-color: $red;
+		//}
+		//&:nth-child(odd) {
+		//	background-color: $darkGrey;
+		//}
+		//&:first-child {
+		//	background:none;
+		//	padding-top:5px;
+		//}
+		&.widget_search {
+			padding:0;
+			#s {
+				width:92.55%;
+				padding:3.725% 10px 7px 3.725%;
+			}
+		}
+	}
+}
+/*----------------------------------------------------------------------------------*/
+/*  Content Pages
+/*----------------------------------------------------------------------------------*/
+
+.entry-content {
+	padding-top:20px;
+
+	h2 {
+		margin: 0px;
+		padding: 0px;
+		margin-bottom:20px;
+	}
+
+
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Top nav styles
+/*----------------------------------------------------------------------------------*/
+#top-nav {
+	ul {
+		margin: 0px;
+		li {
+			font-size: 0.8em;
+			float: left;
+			a {
+				color: $darkGrey;
+				border: none;
+			}
+			.sep {
+				color: $darkGrey;
+				margin: 0 5px;
+			}
+			&:last-child,
+			&.last {
+				.sep {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Custom page boxes
+/*----------------------------------------------------------------------------------*/
+.feature-content.type1 {
+	background-color: rgba(254, 255, 0, 0.5);
+}
+.feature-content.type2 {
+	background-color: rgba(255, 0, 0, 0.10);
+}
+.feature-content.type3 {
+	background-color: rgba(0, 128, 0, 0.50);
+}
+
+/*----------------------------------------------------------------------------------*/
+/*  Shallow template styles
+/*----------------------------------------------------------------------------------*/
+body {
+	&.page-template-template-full-width-shallow-php,
+	&.page-template-templatestemplate-people-php {
+		#primary { 
+			width: 960px !important;
+		}
+		#content {
+			background: $oneColBg repeat-y;
+		}
+		.type-page {
+			width: 920px;
+		}
+	}
+}
+
+.full-width-shallow {
+	width: 940px!important;
+}
+
+#feature-wrapper.shallow {
+	height:250px;
+}
+.shallow {
+	.feature {
+		.feature-content {
+			top: 34%;
+			width:44%;
+			height: 80px;
+			background-color: rgba(000,000,000, 0.5);
+			border-top: 10px solid $red;
+			h2 {
+				font: 100 #{$textSize}/#{$textLineHeight} $font;;
+				a {
+					background: none;
+					box-shadow: none;
+					letter-spacing: 4px;
+					height: 69px;
+					line-height:69px;
+				}
+			}
+		}
+	}
+}
+
+#content {
+	.page-header {
+		background: $singleDottedH bottom repeat-x;
+		padding-bottom:20px;
+	}
+}
+/*----------------------------------------------------------------------------------*/
+/*  Case Studies Box Template
+/*----------------------------------------------------------------------------------*/
+
+.latest-case-studies {
+	color:white;
+	background-color:$red;
+	border-top:3px solid $borderBlack;
+	position:relative;
+	padding:40px 20px 20px 20px;
+	margin-top:50px;
+	@include clearfix;
+	h3 {
+		position: absolute;
+		top: 0px;
+		left: 19px;
+		font-weight: bold;
+		font-size: 11px;
+		text-transform: uppercase;
+		color: white;
+		background: #202222;
+		padding: 1px 7px;
+		font-family: "Helvetica Neue", Helvetica, Sans-serif;
+	}
+	.case-study {
+		width:260px;
+		display:inline-block;
+		margin-right:40px;
+		h4 {
+			background: $pencil left top no-repeat;
+			background-position-y: 3px;
+			padding-left:25px;
+			color:white;
+			margin-bottom:20px;
+		}
+		p {
+			margin-left: 25px;
+		}
+		&.last {
+			margin-right:0;
+		}
+	}
+	span {
+		a {
+			color:white;
+			text-decoration: underline;
+			&:visited {
+				color:white;
+			}
+		}
+	}
+}
+
+
+/*----------------------------------------------------------------------------------*/
+/*  Clients / People Template
+/*----------------------------------------------------------------------------------*/
+
+.page-template-templatestemplate-clients-php,
+.page-template-templatestemplate-people-php {
+	#content {
+		background: none;
+		.entry-content {
+		}
+	}
+}
+.clients,
+.people {
+	.type-page {
+		width:920px;
+		h1.entry-title {
+			display:inline-block;
+			width:auto;
+		}
+		.tagline-text {
+			margin-left:20px;
+		}
+	}
+}
+
+.close {
+	float:right;
+	background: $close no-repeat;
+	width:35px;
+	height:35px;
+}
+
+.clients {
+	.clients-container {
+		background: $singleDottedH top repeat-x;
+		padding-top:4px;
+		.client-container {
+			width:202px;
+			height:160px;
+			background-color:$grey;
+			padding:5px;
+			img {
+				cursor:pointer;
+				height:100%;
+				width:100%;
+			}
+		}
+	}
+	.client-info {
+		display:none;
+		padding-top:30px;
+		padding-bottom:30px;
+		background: $singleDottedH top repeat-x;
+		@include clearfix;
+
+		.header {
+			@include clearfix;
+			padding:0px;
+			h3 {
+				color:$red;
+				font-size:2em;
+				float:left;
+			}
+		}
+		.content {
+			float:left;
+			width:50%;
+			h4 {
+				margin-bottom:20px;
+			}
+			p {
+			}
+		}
+
+		img {
+			margin-left:40px;
+			float:left;
+		}
+	}
+}
+.people {
+
+	.entry-content {
+		padding:0;
+	}
+	.team-selector {
+		text-transform:uppercase;
+		padding: 19px 0 19px 0;
+	}
+
+	.person-info {
+		display: none;
+		@include clearfix;
+		background: $singleDottedH bottom repeat-x;
+		padding-top:20px;
+		.header {
+			@include clearfix;
+			margin-bottom:25px;
+			h2 {
+				color:$red;
+				float:left;
+				margin-bottom:0;
+				font-size:2.3em;
+				font-family: "OpenSans-Light";
+			}
+			.position {
+				clear:both;
+				float:left;
+				font-size:1.3em;
+			}
+		}
+		.content {
+		}
+		img {
+			float:left;
+			margin-right:30px;
+			margin-bottom:20px;
+		}
+	}
+	.people-container {
+		background: $singleDottedH top repeat-x;
+		padding-top:4px;
+		.person-container {
+			padding:5px;
+			border-bottom:3px solid $borderBlack;
+			padding-bottom:20px;
+			.wrapper {
+				position:relative;
+			}
+			.more-info-hover {
+				display:none;
+				position:absolute;
+				top:5;
+				background-color:$red;
+				z-index:999;
+				color:white;
+				font-size:1.3em;
+				.inner {
+					padding:20px;
+					width:auto;
+					p {
+						width:auto;
+					}
+				}
+			}
+			h3 {
+				color:$red;
+				margin-bottom:2px;
+			}
+			img {
+				cursor:pointer;
+				margin:0 auto;
+				margin-bottom:20px;
+			}
+		}
+	}
+
+}
+
+/*----------------------------------------------------------------------------------*/
+/* Shortcodes
+/*----------------------------------------------------------------------------------*/
+
+.call-to-action-sc {
+	padding:20px;
+	background-color:$red;
+	margin: 5px 0;
+	.cta-inner {
+		color:$white;
+		padding-left:40px;
+		font-size:1.4em;
+		line-height:1.3em;
+		background: 0 4px $rightArrow no-repeat;
+		a {
+			color:$white;
+			font-family:"ffOpenSans-Bold";
+		}
+	}
+}
+.quote-sc {
+	padding:20px;
+	background-color: $lighterGrey;
+	margin: 5px 0;
+	.q-inner {
+		font-family:"ffOpenSans-LightItalic";
+		color:$textColor;
+		padding-left:40px;
+		font-size:2em;
+		line-height:1.5em;
+		background: 0 10px $speechBubble no-repeat;
+		a {
+			color:$white;
+		}
+	}
+}
+
+.download-sc {
+	padding:20px;
+	background-color: $lighterGrey;
+	margin: 5px 0;
+
+	.d-inner {
+		@include clearfix;
+		img {
+			float:right;
+			margin:0 0 10px 10px;
+		}
+		.content {
+			h2 {
+
+			}
+
+			p {
+
+			}
+			a {
+
+			}
+		}
+	}
+}
+/*----------------------------------------------------------------------------------*/
+/* Misc
+/*----------------------------------------------------------------------------------*/
+.currentFilter {
+	color:$lightGrey;
+}
