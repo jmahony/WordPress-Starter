@@ -7,17 +7,17 @@
 ?>
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
+<html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?> class="no-js">
 
 <head>
-	
-	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>" />
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 
 	<title><?php wp_title( '&laquo;', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
 	
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/lib/custom_styles.php" type="text/css" media="screen" />
 
 	<!--[if IE 7]>
 		<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/ie-style.css" type="text/css" media="screen" />
@@ -26,8 +26,14 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="shortcut icon" href="<?php bloginfo( 'template_url' ); ?>/favicon.ico" />
 
-	<?php wp_head(); ?>
-
+	<?php
+		wp_head();
+		global $NHP_Options;
+	?>
+	
 </head>
 
 <body <?php body_class(); ?>>
+	<!--[if lt IE 7]>
+	    <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+	<![endif]-->

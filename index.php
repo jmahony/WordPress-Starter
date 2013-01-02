@@ -9,17 +9,13 @@
 
 <?php get_header(); ?>
 
-<?php setup_postdata( $post ); ?>
-
 <div class="container">
-	<div class="row" id="main-content">
-		<div class="span8">
+	<div class="row">
+		<div class="span12">
 			<div class="well">
-				<h1><?php the_title(); ?></h1>
-				<?php the_content(); ?>
+				<?php _e( 'Create a page and set it as the homepage in the admin section.', 'rep' ); ?>	
 			</div>
 		</div>
-		<?php get_sidebar(); ?>
 	</div>
 </div>
 
