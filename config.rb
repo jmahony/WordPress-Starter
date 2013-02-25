@@ -1,7 +1,7 @@
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path       = "/wp-content/themes/NAME/"
+http_path       = "/wp-content/themes/utilitywarehouse/"
 css_dir         = "assets/css"
 sass_dir        = "assets/scss"
 images_dir      = "assets/img"
@@ -22,3 +22,5 @@ line_comments = true
 # preferred_syntax = :sass
 # and then run:
 # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
+
+require "rgbapng"

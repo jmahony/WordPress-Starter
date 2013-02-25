@@ -2,10 +2,13 @@
 /**
  * @package WordPress
  * @subpackage Rep_Template
- * 
+ *
  */
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
 
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?> class="no-js">
 
@@ -13,10 +16,12 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta http-equiv="Content-Type" content="<?php bloginfo( 'html_type' ); ?>; charset=<?php bloginfo( 'charset' ); ?>" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<title><?php wp_title( '&laquo;', true, 'right' ); ?> <?php bloginfo( 'name' ); ?></title>
-	
+
 	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" media="screen" />
 
 	<!--[if IE 7]>
@@ -26,11 +31,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="shortcut icon" href="<?php bloginfo( 'template_url' ); ?>/favicon.ico" />
 
-	<?php
-		wp_head();
-		global $NHP_Options;
-	?>
-	
+	<?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
