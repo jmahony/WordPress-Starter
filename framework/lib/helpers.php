@@ -332,8 +332,6 @@ function get_post_array( $post_type = 'post' ) {
  **/
 function post_drop_down( $post_type = 'post', $current_id = null, $placeholder = false ) {
 
-	if ( !post_type_exists( $post_type ) ) return null;
-
 	$posts = get_post_array( $post_type );
 
 	$post_options = (string) '';
