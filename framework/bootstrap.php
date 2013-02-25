@@ -7,19 +7,13 @@
  *
  */
 
-
-$custom_settings = array(
-
-  '/includes/settings.php'
-
-);
-
 $framework_libraries = array(
 
   '/framework/defaults.php',
   '/framework/actions.php',
   '/framework/lib/wpalchemy/MetaBox.php',
   '/framework/lib/CSS-Generator-for-NHP-Framework/css_generator.php',
+  '/framework/lib/NHP-Theme-Options-Framework/nhp-options.php', // TODO: this needs to be moved into includes
   '/framework/lib/helpers.php',
   '/framework/lib/enqueue.php',
   '/framework/lib/persistence.php'
@@ -41,6 +35,6 @@ $custom_libraries = array(
 
 );
 
-\Rep\Core\load_library( array_merge( $custom_settings, $framework_libraries, $custom_libraries ) );
+\Rep\Core\load_library( array_merge( $framework_libraries, $custom_libraries ) );
 
 ?>
