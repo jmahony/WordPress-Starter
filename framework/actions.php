@@ -7,24 +7,33 @@
  *
  */
 
-$actions = array(
+$hooks = array(
 
-  'admin_enqueue_scripts' => 'rep_enqueue_styles_admin',
-  'init'                  => 'rep_create_post_type',
-  'wp_enqueue_scripts'    => 'rep_enqueue_scripts',
-  'wp_enqueue_scripts'    => 'rep_enqueue_styles',
-  'init'                  => 'rep_create_post_type',
-  'widgets_init'          => 'rep_sidebars_init'
+  'admin_enqueue_scripts' => array(
+    'rep_enqueue_styles_admin'
+  ),
+
+  'wp_enqueue_scripts'    => array(
+    'rep_enqueue_scripts',
+    'rep_enqueue_styles'
+  ),
+
+  'init'                  => array(
+    'rep_create_post_type'
+  ),
+
+  'widgets_init'          => array(
+    'rep_sidebars_init'
+  )
 
 );
 
-if ( STYLE_KEY ) $actions['wp_head'] = 'add_styles';
+if ( STYLE_KEY ) $hooks['wp_head'][] = 'add_styles';
 
-if ( INCLUDE_JS  ) $actions['wp_enqueue_scripts'] = 'Rep\\Enqueue\\enqueue_scripts';
+if ( INCLUDE_JS ) $hooks['wp_enqueue_scripts'][] = 'Rep\\Enqueue\\enqueue_scripts';
 
-if ( INCLUDE_CSS  ) $actions['wp_enqueue_scripts'] = 'Rep\\Enqueue\\enqueue_styles';
+if ( INCLUDE_CSS ) $hooks['wp_enqueue_scripts'][] = 'Rep\\Enqueue\\enqueue_styles';
 
-
-\Rep\Core\add_actions( $actions );
+\Rep\Core\add_actions( $hooks );
 
 ?>
