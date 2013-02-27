@@ -5,15 +5,16 @@
  *
  */
 
-/* -------------------- INIT FRAMEWORK -------------------- */
+/* Initialise the framework */
 require( 'framework/init.php' );
 
-/* -------------------- CONTENT WIDTH -------------------- */
+/* Content width */
 if ( !isset( $content_width ) ) $content_width = 926;
 
-/* -------------------- ADD CUSTOM THEME SUPPORT -------------------- */
+/* Custom theme support */
 add_theme_support('post-thumbnails');
 
+/* Declare image sizes */
 $image_sizes = array(
 	'rep-small-thumb' => array(
 		'width'  => 139,
@@ -27,13 +28,14 @@ $image_sizes = array(
 
 Rep\Helpers\set_image_sizes( $image_sizes );
 
+/* Setup the excerpt length */
 add_filter( 'excerpt_length', 'set_excerpt_length' );
 function set_excerpt_length() {
 
 	return 20; //default value
 
 }
-
+/* Setup the excerpt length */
 function rep_dependencies() {
 
 	$dependencies = array();
