@@ -5,7 +5,24 @@
  *
  */
 
-/* Initialise the framework */
+/* Set Framework Options */
+
+/* Compress PHP generated CSS */
+define( 'COMPRESS_CSS',       true );
+
+/* NHP Options Key */
+define( 'STYLE_KEY',          false );
+
+/* Include Framework CSS */
+define( 'INCLUDE_CSS',        true );
+
+/* Include Framework JS */
+define( 'INCLUDE_JS',         true );
+
+/* Which persistence method */
+define( 'PERSISTENCE_METHOD', 'COOKIE' );
+
+/* Include the framework */
 require( 'framework/init.php' );
 
 /* Content width */
