@@ -165,10 +165,11 @@ function get_thumbnail( $post_id = null, $size = 'full' ) {
 		if ( array_key_exists( $size, $image_sizes ) ) {
 
 			$thumbnail = sprintf(
-				'<img width="%1$d" height="%2$d" class="feature-image" src="http://placehold.it/%1$dx%2$d" alt="%3$s" />',
+				'<img width="%1$d" height="%2$d" class="feature-image %4$s" src="http://placehold.it/%1$dx%2$d" alt="%3$s" />',
 			  $image_sizes[$size]['width'],
 			  $image_sizes[$size]['height'],
-			  __( 'Placeholder for ' . get_the_title( $post_id ), 'rep' )
+			  __( 'Placeholder for ' . get_the_title( $post_id ), 'rep' ),
+			  $size
 			);
 
 		}
