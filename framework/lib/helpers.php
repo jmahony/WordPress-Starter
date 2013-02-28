@@ -470,7 +470,7 @@ function is_today( $dt = null ) {
 }
 
 /**
- * is_today
+ * in_future
  *
  * Returns whether the param date is in the future
  *
