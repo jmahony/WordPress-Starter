@@ -388,7 +388,7 @@ function sixteen_nine($width = 0) {
  * @return Boolean
  **/
 function is_admin_user() {
-	return current_user_can('manage_options');
+	return current_user_can( 'manage_options' );
 }
 
 /**
@@ -423,13 +423,63 @@ function scripts_force_footer( $scripts = array() ) {
 		'comment-reply'
 	);
 
-	$to_footer = array_merge($scripts, $to_footer);
+	$to_footer = array_merge( $scripts, $to_footer );
 
 	foreach ( $wp_scripts->registered as $script ) {
 		if ( in_array( $script->handle, $to_footer ) ) {
 			$wp_scripts->add_data( $script->handle, 'group', 1 );
 		}
 	}
+
+}
+
+/**
+ * in_past
+ *
+ * Returns whether the param date is in the past or not
+ *
+ * @param String date
+ * @return Bool
+ **/
+function in_past( $dt = null ) {
+
+	$dt = new \DateTime( $dt );
+
+	$now = new \DateTime();
+
+	return $dt < $now;
+
+}
+
+/**
+ * is_today
+ *
+ * Returns whether the param date is today
+ *
+ * @param String date
+ * @return Bool
+ **/
+function is_today( $dt = null ) {
+
+	$dt = new \DateTime( $dt );
+
+	$now = new \DateTime();
+
+	return $dt->format( 'Y-m-d' ) == $now->format( 'Y-m-d' );
+
+}
+
+/**
+ * is_today
+ *
+ * Returns whether the param date is in the future
+ *
+ * @param String date
+ * @return Bool
+ **/
+function in_future( $dt = null ) {
+
+	return !in_past( $dt );
 
 }
 ?>
