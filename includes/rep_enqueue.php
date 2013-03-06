@@ -14,9 +14,9 @@ function rep_enqueue_scripts() {
 	// Register Modernizr
 	wp_register_script(
 		'modernizr',
-		'http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js',
+		'//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js',
 		null,
-		'2.0.6',
+		'2.6.2',
 		true
 	);
 
