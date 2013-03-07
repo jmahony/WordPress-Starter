@@ -279,9 +279,11 @@ function blog_page_url() {
  *
  * @return Bool
  **/
-function get_thumbnail_url() {
+function get_thumbnail_url( $post_id = null ) {
 
-	global $post;
+	if ( !$post_id ) {
+		global $post;
+	}
 
 	return wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 
