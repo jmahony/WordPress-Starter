@@ -277,13 +277,12 @@ function blog_page_url() {
  * get_thumbnail_url
  *
  *
+ * @param WP_Post
  * @return Bool
  **/
-function get_thumbnail_url( $post_id = null ) {
+function get_thumbnail_url( \WP_Post $post ) {
 
-	if ( !$post_id ) {
-		global $post;
-	}
+	if ( !$post ) global $post;
 
 	return wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 
