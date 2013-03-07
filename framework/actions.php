@@ -19,7 +19,8 @@ $hooks = array(
   ),
 
   'init'                  => array(
-    'rep_create_post_type'
+    'rep_create_post_type',
+    'setup_framework_options'
   ),
 
   'widgets_init'          => array(
