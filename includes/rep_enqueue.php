@@ -25,7 +25,7 @@ function rep_enqueue_scripts() {
 		'jquery',
 		'//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
 		null,
-		'1.8.2',
+		'1.9.1',
 		false
 	);
 
@@ -49,14 +49,7 @@ function rep_enqueue_scripts() {
 
 }
 
-function rep_enqueue_styles_admin() {
-
-	wp_enqueue_style(
-		'wpalchemy-metabox',
-		CURRENT_THEME_URL . '/includes/metaboxes/meta.css'
-	);
-
-}
+function rep_enqueue_styles_admin() {}
 
 if ( is_admin() ) add_action( 'wp_enqueue_scripts', 'rep_enqueue_styles_admin' );
 
