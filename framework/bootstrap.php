@@ -31,7 +31,7 @@ $custom_libraries = array(
   '/includes/widgets/rep_widgets.php',
   '/includes/rep_categories.php',
   '/includes/rep_custom_styles.php',
-  '/includes/rep_admin_options.php',
+  '/includes/rep_theme_options.php',
 
 );
 
