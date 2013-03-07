@@ -11,8 +11,7 @@ $framework_libraries = array(
 
   '/framework/defaults.php',
   '/framework/lib/wpalchemy/MetaBox.php',
-  //TODO: URGENT! Move NHP options outside of framework
-  '/framework/lib/NHP-Theme-Options-Framework/nhp-options.php',
+  '/framework/lib/NHP-Theme-Options-Framework/options/options.php',
   '/framework/lib/CSS-Generator-for-NHP-Framework/css_generator.php',
   '/framework/lib/helpers.php',
   '/framework/lib/enqueue.php',
