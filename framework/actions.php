@@ -15,6 +15,7 @@ $hooks = array(
 
   'wp_enqueue_scripts'    => array(
     'rep_enqueue_scripts',
+    'rep_create_taxonomies',
     'rep_enqueue_styles'
   ),
 
