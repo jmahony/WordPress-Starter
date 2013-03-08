@@ -483,4 +483,32 @@ function in_future( $dt = null ) {
 	return !in_past( $dt );
 
 }
+
+/**
+ * get_tweets
+ *
+ * Returns tweets
+ *
+ * @param Int count
+ * @return Mixed
+ **/
+function get_tweets( $count = 1, $un = null ) {
+
+	$tweets = null;
+
+	if (!$un) return null;
+
+	$url = sprintf( 'http://api.twitter.com/1/statuses/user_timeline/%s.json?&count=%d', $un,  intval( $count ) );
+
+	$json = @file_get_contents( $url );
+
+	if ($json !== false) {
+		$tweets = json_decode( $json );
+	} else {
+		$tweets = 'Twitter feed fail';
+	}
+
+	return $tweets;
+
+}
 ?>
