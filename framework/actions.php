@@ -10,7 +10,8 @@
 $hooks = array(
 
   'admin_enqueue_scripts' => array(
-    'rep_enqueue_styles_admin'
+    'rep_enqueue_styles_admin',
+    'rep_enqueue_scripts_admin'
   ),
 
   'wp_enqueue_scripts'    => array(
