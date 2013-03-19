@@ -13,6 +13,7 @@ $framework_libraries = array(
   '/framework/lib/wpalchemy/MetaBox.php',
   '/framework/lib/NHP-Theme-Options-Framework/options/options.php',
   '/framework/lib/CSS-Generator-for-NHP-Framework/css_generator.php',
+  '/framework/lib/Mustache/Autoloader.php',
   '/framework/lib/helpers.php',
   '/framework/lib/enqueue.php',
   '/framework/lib/persistence.php'
