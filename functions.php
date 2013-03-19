@@ -29,7 +29,7 @@ require( 'framework/init.php' );
 if ( !isset( $content_width ) ) $content_width = 926;
 
 /* Custom theme support */
-add_theme_support('post-thumbnails');
+add_theme_support( 'post-thumbnails' );
 
 /* Declare image sizes */
 $image_sizes = array(
