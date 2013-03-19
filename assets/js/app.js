@@ -1,4 +1,4 @@
-(function($) {
+(function($, window, document, undefined) {
 
 	/*global OBJECT:false */
 
@@ -7,5 +7,5 @@
 	$(document).ready(function() {
 
 	});
-	
-})(jQuery);
+
+})(jQuery, window, document);
