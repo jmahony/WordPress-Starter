@@ -32,4 +32,7 @@ require_once( 'core.php' );
 
 \Rep\Core\load_library( array( '/framework/bootstrap.php' ) );
 
+// Register Mustache
+Mustache_Autoloader::register();
+
 ?>
