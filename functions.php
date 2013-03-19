@@ -52,6 +52,7 @@ function set_excerpt_length() {
 	return 20; //default value
 
 }
+
 /* Setup the excerpt length */
 function rep_dependencies() {
 
