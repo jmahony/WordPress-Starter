@@ -2,25 +2,21 @@
 /**
  * @package WordPress
  * @subpackage Rep_Template
- * 
+ *
  */
 
-?>
+?><?php get_header(); ?>
 
-<?php get_header(); ?>
-
-<?php setup_postdata( $post ); ?>
-
-<div class="container">
+<section class="container">
 	<div class="row" id="main-content">
 		<div class="span8">
 			<div class="well">
-				<h1><?php the_title(); ?></h1>
+				<h2 class="page-title"><?php the_title(); ?></h2>
 				<?php the_content(); ?>
 			</div>
 		</div>
 		<?php get_sidebar(); ?>
 	</div>
-</div>
+</section>
 
 <?php get_footer(); ?>

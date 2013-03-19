@@ -17,11 +17,13 @@ function load_library( $a = array() ) {
 
 }
 
-function add_actions( $actions = array() ) {
+function add_actions( $hooks = array() ) {
 
-  foreach ( $actions as $hook => $action ) {
-    if ( function_exists( $action ) ) {
-      add_action( $hook, $action );
+  foreach ( $hooks as $hook => $actions ) {
+    foreach ( $actions as $action ) {
+      if ( function_exists( $action ) ) {
+        add_action( $hook, $action );
+      }
     }
   }
 

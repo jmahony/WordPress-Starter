@@ -1,13 +1,16 @@
 <?php namespace Rep;
-
-
 /**
-* 
-* @todo Add encryption
-* @todo Add Cookie Chaining
-* @todo Add File system storage
-* 
-*/
+ * @package WordPress
+ * @subpackage Template
+ *
+ * Persistence Singleton
+ *
+ * @todo Add encryption
+ * @todo Add Cookie Chaining
+ * @todo Add File system storage
+ *
+ */
+
 class Persistence {
 
 	/**
@@ -30,11 +33,11 @@ class Persistence {
 	 * @return Persistence
 	 */
 	public static function get_instance() {
-	    static $instance = null;
-	    if ($instance === null) {
-	        $instance = new Persistence();
-	    }
-	    return $instance;
+		static $instance = null;
+		if ($instance === null) {
+				$instance = new Persistence();
+		}
+		return $instance;
 	}
 
 	/**
@@ -47,22 +50,20 @@ class Persistence {
 	 * set a key value pair
 	 *
 	 * @return Bool
-	 * @author 
+	 * @author
 	 **/
 	public static function set($k = null, $v = null)	{
 
 		if ( !$k || !$v ) return false;
 
 		// Default to cookie storage
-		if (!defined('PERSISTENCE_METHOD')) {
-			define('PERSISTENCE_METHOD', 'COOKIE');
-		}
-		
+		if ( !defined( 'PERSISTENCE_METHOD' ) ) define( 'PERSISTENCE_METHOD', 'COOKIE' );
+
 		// We first store the value in memory
 		self::$store[$k] = $v;
 
 		// Store using selected method
-		switch (PERSISTENCE_METHOD) {
+		switch ( PERSISTENCE_METHOD ) {
 			case 'COOKIE':
 				return self::set_cookie( $k, $v );
 				break;
@@ -79,21 +80,19 @@ class Persistence {
 	 * Get a value from the store
 	 *
 	 * @return Mixed
-	 * @author 
+	 * @author
 	 **/
 	public static function get($k = null) {
-		
+
 		if ( !$k ) return null;
 
 		// Defaul to cookie storage
-		if ( !defined( 'PERSISTENCE_METHOD' ) ) {
-			define( 'PERSISTENCE_METHOD', 'COOKIE' );
-		}
-		
+		if ( !defined( 'PERSISTENCE_METHOD' ) ) define( 'PERSISTENCE_METHOD', 'COOKIE' );
+
 		// Check if we have the key in memory, if so return the value
 		if ( self::store_has_key( $k ) ) return self::store_get_value( $k );
 
-		// Check the chosen store and return 
+		// Check the chosen store and return
 		switch ( PERSISTENCE_METHOD ) {
 			case 'COOKIE':
 				return self::get_cookie( $k );
@@ -111,7 +110,7 @@ class Persistence {
 	 * Checks the in memory store for specified key
 	 *
 	 * @return Bool
-	 * @author 
+	 * @author
 	 **/
 	private static function store_has_key($key = null) {
 
@@ -123,7 +122,7 @@ class Persistence {
 	 * Return the in memory value for supplied key
 	 *
 	 * @return Mixed
-	 * @author 
+	 * @author
 	 **/
 	private static function store_get_value($k) {
 
@@ -137,13 +136,13 @@ class Persistence {
 
 	/**
 	 * Stores key value pair in cookie
-	 * 
+	 *
 	 * @todo Add encrypt
 	 * @todo Add multi cookie chaining
 	 * @todo Ability to set expiry
 	 *
 	 * @return Bool
-	 * @author 
+	 * @author
 	 **/
 	private static function set_cookie($k = null, $v = null) {
 
@@ -158,9 +157,9 @@ class Persistence {
 	 *
 	 * @todo Add decryption
 	 * @todo Add multi cookie chaining
-	 * 
+	 *
 	 * @return Mixed
-	 * @author 
+	 * @author
 	 **/
 	private static function get_cookie($k = null) {
 
@@ -176,7 +175,7 @@ class Persistence {
 	 * Stores supplied key value pair in session
 	 *
 	 * @return void
-	 * @author 
+	 * @author
 	 **/
 	public static function set_session( $k = null, $v = null ) {
 
@@ -192,7 +191,7 @@ class Persistence {
 	 * Get value for supplied key from session
 	 *
 	 * @return void
-	 * @author 
+	 * @author
 	 **/
 	private static function get_session( $k = null ) {
 
@@ -208,12 +207,12 @@ class Persistence {
 	 * Encrypt supplied data
 	 *
 	 * @return String
-	 * @author 
+	 * @author
 	 **/
 	private static function encrypt($data, $key) {
 
 		$key = md5($key);
-		
+
 		$encrypted = array();
 
 		$m = mcrypt_module_open('rijndael-256', '', 'cbc', '');
@@ -227,7 +226,7 @@ class Persistence {
 		mcrypt_generic_deinit($m);
 
 		mcrypt_module_close($m);
-		
+
 		$encrypted = array('data' => $data, 'thingybob' => $iv);
 
 		return $encrypted;
@@ -238,24 +237,24 @@ class Persistence {
 	 * Decrypt supplied data
 	 *
 	 * @return Array
-	 * @author 
+	 * @author
 	 **/
 	private static function decrypt($data, $key) {
-		
+
 		$key = md5($key);
 
 		$m = mcrypt_module_open('rijndael-256', '', 'cbc', '');
 
 		$iv = $data['thingybob'];
-		
+
 		mcrypt_generic_init($m, $key, $iv);
-		
+
 		$data = mdecrypt_generic($m, $data['data']);
-		
+
 		mcrypt_generic_deinit($m);
 
 		mcrypt_module_close($m);
-		
+
 		return trim($data);
 	}
 
