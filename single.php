@@ -11,7 +11,7 @@
 	<div class="row" id="main-content">
 		<div class="span8">
 			<div class="well">
-				<h2 class="page-title"><?php the_title(); ?></h2>
+				<h2 class="entry-title"><?php the_title(); ?></h2>
 				<?php the_content(); ?>
 			</div>
 		</div>
