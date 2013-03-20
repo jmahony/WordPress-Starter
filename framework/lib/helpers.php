@@ -219,6 +219,9 @@ function post_type_labels( $singular = null, $plural = null, $prepend = null, $a
 		$plural = $singular . 's';
 	}
 
+	$plural = ucwords( $plural );
+	$singular = ucwords( $singular );
+
   return array(
 		'name'               => _x( $prepend . $plural . $append, 'post type general name', 'rep' ),
 		'singular_name'      => _x( $singular, 'post type singular name', 'rep' ),
