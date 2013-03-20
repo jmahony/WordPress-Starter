@@ -10,7 +10,7 @@
 $framework_libraries = array(
 
   '/framework/defaults.php',
-  '/framework/lib/wpalchemy/MetaBox.php',
+  '/framework/lib/wpalchemy/MetaBox.php', // Start phasing alchemy out
   '/framework/lib/NHP-Theme-Options-Framework/options/options.php',
   '/framework/lib/CSS-Generator-for-NHP-Framework/css_generator.php',
   '/framework/lib/Mustache/Autoloader.php',
@@ -35,13 +35,14 @@ $custom_libraries = array(
 
 );
 
-/* We need to include the actions last */
-$actions = array(
+/* Include stuff last */
+$after = array(
 
+  '/framework/lib/Custom-Metaboxes-and-Fields-for-WordPress/init.php', // Needs to be included after meta boxes
   '/framework/actions.php'
 
 );
 
-\Rep\Core\load_library( array_merge( $framework_libraries, $custom_libraries, $actions ) );
+\Rep\Core\load_library( array_merge( $framework_libraries, $custom_libraries, $after ) );
 
 ?>
