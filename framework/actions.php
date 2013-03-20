@@ -10,23 +10,26 @@
 $hooks = array(
 
   'admin_enqueue_scripts' => array(
-    'rep_enqueue_styles_admin',
-    'rep_enqueue_scripts_admin'
+    'rep_enqueue_styles_admin'
   ),
 
   'wp_enqueue_scripts'    => array(
-    'rep_create_taxonomies',
     'rep_enqueue_scripts',
     'rep_enqueue_styles'
   ),
 
   'init'                  => array(
+    'rep_create_taxonomies',
     'rep_create_post_type',
     'setup_framework_options'
   ),
 
   'widgets_init'          => array(
     'rep_sidebars_init'
+  ),
+
+  'admin_enqueue_scripts' => array(
+    'Rep\\Enqueue\\enqueue_styles_admin'
   )
 
 );
