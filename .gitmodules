@@ -1,3 +1,6 @@
 [submodule "framework/lib/Custom-Metaboxes-and-Fields-for-WordPress"]
 	path = framework/lib/Custom-Metaboxes-and-Fields-for-WordPress
 	url = git://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress.git
+[submodule "framework/lib/NHP-Theme-Options-Framework"]
+	path = framework/lib/NHP-Theme-Options-Framework
+	url = git://github.com/leemason/NHP-Theme-Options-Framework.git
