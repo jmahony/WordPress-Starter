@@ -1,2 +1,2 @@
-Stuff I need to add:
-post_type_label
+To do:
+Add in upcoming metabox framework
