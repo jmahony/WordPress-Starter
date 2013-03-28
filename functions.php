@@ -53,7 +53,7 @@ function set_excerpt_length() {
 
 }
 
-/* Setup the excerpt length */
+/* Setup the excerpt length */ // TODO: Hook this in to head or something
 function rep_dependencies() {
 
 	$dependencies = array();
