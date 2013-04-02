@@ -2,7 +2,7 @@
 
 # Set this to the root of your project when deployed:
 http_path       = "/wp-content/themes/THEMENAME/"
-css_dir         = "assets/css"
+css_dir         = ""
 sass_dir        = "assets/scss"
 images_dir      = "assets/img"
 javascripts_dir = "assets/js"
