@@ -25,7 +25,11 @@ if ( !defined( 'CURRENT_THEME_URL' ) ) {
 
 }
 
-define( 'ASSETS_URL', CURRENT_THEME_URL . '/assets/' );
+if ( !defined('FRAMEWORK_URL') )  define('FRAMEWORK_URL', CURRENT_THEME_URL . '/framework');
+
+if ( !defined('LIBRARY_URL') )  define('LIBRARY_URL', FRAMEWORK_URL . '/lib');
+
+define( 'ASSETS_URL', CURRENT_THEME_URL . '/assets' );
 
 // Load core functions
 require_once( 'core.php' );

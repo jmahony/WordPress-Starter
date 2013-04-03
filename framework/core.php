@@ -17,6 +17,12 @@ function load_library( $a = array() ) {
 
 }
 
+function load_admin_library( $a = array() ) {
+
+  if ( is_admin() ) load_library( $a );
+
+}
+
 function add_actions( $hooks = array() ) {
 
   foreach ( $hooks as $hook => $actions ) {
