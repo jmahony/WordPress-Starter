@@ -31,6 +31,7 @@ function excerpt( $length, $post_id = null ) {
 	$excerpt = implode( ' ', $excerpt ) . '...';
 
 	$excerpt = preg_replace( '`\[[^\]]*\]`', '', $excerpt );
+	$excerpt = preg_replace('`/<[^>]*>/`', '', $excerpt);
 
 	return $excerpt;
 
