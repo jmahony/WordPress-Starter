@@ -2,16 +2,43 @@
 /**
  * @package WordPress
  * @subpackage Rep_Template
- * 
- * Place all of your meta boxes here (requires WPAlchemy framework)
- * 
+ *
+ * Place all of your meta boxes here (requires JMetaBox framework)
+ *
  */
 
-//$custom_metabox = new WPAlchemy_MetaBox(array(
-//	'id'       => '_custom_meta',
-//	'title'    => 'My Custom Meta',
-//	'template' => THEME_DIR . '/lib/metaboxes/simple-meta.php',
-//	'types'    => array('tribe_events')
-//));
+if ( is_admin() ) {
 
+  add_action( 'load-post.php', function() {
+
+    new JMetaBox( array(
+      'id'       => 'rep_meta_box',
+      'title'    => 'Page Options',
+      'desc'     => 'Page options for Brighton Digital Festival.',
+      'context'  => 'advanced',
+      'priority' => 'high',
+      'types'    => array(
+        'page'
+      ),
+      'fields' => array(
+        array(
+          'id'       => 'introText',
+          'type'     => 'textarea',
+          'label'    => 'Intro Text'
+        ),
+        array(
+          'id'       => 'introTextColor',
+          'type'     => 'color',
+          'label'    => 'Text Color'
+        ),
+        array(
+          'id'       => 'introBgColor',
+          'type'     => 'color',
+          'label'    => 'Background Color'
+        )
+      )
+    ) );
+
+ });
+}
 ?>
