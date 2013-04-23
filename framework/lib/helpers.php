@@ -198,7 +198,11 @@ function set_image_sizes( $image_sizes = null ) {
 	if ( !$image_sizes ) return false;
 
 	foreach ( $image_sizes as $name => $size ) {
-		add_image_size( $name, $size['width'], $size['height'] );
+
+		$crop = isset( $size['crop'] ) ? $size['crop'] : false;
+
+		add_image_size( $name, $size['width'], $size['height'], $crop );
+
 	}
 
 }
