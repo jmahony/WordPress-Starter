@@ -32,6 +32,7 @@ function excerpt( $length, $post_id = null ) {
 
 	$excerpt = preg_replace( '`\[[^\]]*\]`', '', $excerpt );
 	$excerpt = preg_replace('`/<[^>]*>/`', '', $excerpt);
+	$excerpt = strip_tags( $excerpt );
 
 	return $excerpt;
 
