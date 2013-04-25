@@ -523,4 +523,24 @@ function get_tweets( $count = 1, $un = null ) {
 	return $tweets;
 
 }
+
+/**
+ * get_mustache
+ *
+ * Returns an instance of Mustache_Engine with the frameworks default loader
+ *
+ * @return Mustache_Engine
+ **/
+function get_mustache() {
+
+	global $RepMustacheEngine;
+
+	if ( $RepMustacheEngine instanceof Mustache_Engine) return $RepMustacheEngine;
+
+	return $RepMustacheEngine = new Mustache_Engine( array(
+    'loader' => new Mustache_Loader_FilesystemLoader( dirname(__FILE__) . '/includes/views' )
+	) );
+
+}
+
 ?>
