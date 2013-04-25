@@ -11,13 +11,6 @@ function enqueue_scripts() {}
 
 function enqueue_styles() {}
 
-function enqueue_styles_admin() {
-
-	wp_enqueue_style(
-		'wpalchemy-metabox',
-		CURRENT_THEME_URL . '/includes/metaboxes/meta.css'
-	);
-
-}
+function enqueue_styles_admin() {}
 
 ?>

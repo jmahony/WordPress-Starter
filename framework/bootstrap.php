@@ -9,7 +9,6 @@
 
 $admin_libraries = array(
 
-  '/framework/lib/wpalchemy/MetaBox.php', // Start phasing alchemy out
   '/framework/lib/NHP-Theme-Options-Framework/options/options.php',
   '/includes/rep_theme_options.php',
   '/framework/lib/JMetaBox/build/init.php',
