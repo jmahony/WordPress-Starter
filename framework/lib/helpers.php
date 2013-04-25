@@ -263,6 +263,7 @@ function is_blog() {
 	}
 
 	return $is_blog;
+
 }
 
 /**
@@ -388,7 +389,6 @@ function sixteen_nine($width = 0) {
 		'height' => round(($width / 16) * 9)
 	);
 
-
 }
 /**
  * is_admin_user
@@ -398,7 +398,9 @@ function sixteen_nine($width = 0) {
  * @return Boolean
  **/
 function is_admin_user() {
+
 	return current_user_can( 'manage_options' );
+
 }
 
 /**
@@ -409,6 +411,7 @@ function is_admin_user() {
  * @return Void
  **/
 function scripts_force_footer( $scripts = array() ) {
+
 	global $wp_scripts;
 
 	$to_footer = array(
