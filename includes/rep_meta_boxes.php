@@ -9,7 +9,7 @@
 
 if ( is_admin() ) {
 
-  add_action( 'load-post.php', function() {
+  add_action( 'init', function() {
 
     new JMetaBox( array(
       'id'       => 'rep_meta_box',
