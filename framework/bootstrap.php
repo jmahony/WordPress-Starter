@@ -9,8 +9,6 @@
 
 $admin_libraries = array(
 
-  '/framework/lib/NHP-Theme-Options-Framework/options/options.php',
-  '/includes/rep_theme_options.php',
   '/framework/lib/JMetaBox/build/init.php',
   '/includes/rep_meta_boxes.php',
 
@@ -18,6 +16,7 @@ $admin_libraries = array(
 
 $framework_libraries = array(
 
+  '/framework/lib/NHP-Theme-Options-Framework/options/options.php',
   '/framework/defaults.php',
   '/framework/lib/Mustache/Autoloader.php',
   '/framework/lib/helpers.php',
@@ -28,6 +27,7 @@ $framework_libraries = array(
 
 $custom_libraries = array(
 
+  '/includes/rep_theme_options.php',
   '/includes/rep_enqueue.php',
   '/includes/rep_custom_types.php',
   '/includes/rep_menus.php',
