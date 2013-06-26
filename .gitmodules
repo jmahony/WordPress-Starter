@@ -7,3 +7,6 @@
 [submodule "framework/lib/JMetaBox"]
 	path = framework/lib/JMetaBox
 	url = https://github.com/jmahony/JMetaBox.git
+[submodule "framework/lib/twitteroauth"]
+	path = framework/lib/twitteroauth
+	url = https://github.com/abraham/twitteroauth.git

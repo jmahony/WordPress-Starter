@@ -19,6 +19,7 @@ $framework_libraries = array(
   '/framework/lib/NHP-Theme-Options-Framework/options/options.php',
   '/framework/defaults.php',
   '/framework/lib/Mustache/Autoloader.php',
+  '/framework/lib/twitteroauth/twitteroauth/twitteroauth.php',
   '/framework/lib/helpers.php',
   '/framework/lib/enqueue.php',
   '/framework/lib/persistence.php'
