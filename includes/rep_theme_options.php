@@ -72,6 +72,42 @@ function setup_framework_options(){
     )
   );
 
+  $sections[] = array(
+    'title'  => __('Twitter API Options', 'nhp-opts'),
+    'desc' => __( '<p>The Twitter API settings</p>', 'nhp-opts' ),
+    'icon'   => NHP_OPTIONS_URL.'img/glyphicons/glyphicons_062_attach.png',
+    'fields' => array(
+      array(
+        'id'         => 'consumerKey',
+        'type'       => 'text',
+        'title'      => __('Consumer Key', 'nhp-opts'),
+        'sub_desc'   => __('Obtained via the Twitter developer website.', 'nhp-opts'),
+        'class'      => 'large-text'
+      ),
+      array(
+        'id'         => 'consumerSecret',
+        'type'       => 'text',
+        'title'      => __('Consumer Secret', 'nhp-opts'),
+        'sub_desc'   => __('Obtained via the Twitter developer website.', 'nhp-opts'),
+        'class'      => 'large-text'
+      ),
+      array(
+        'id'         => 'oAuthToken',
+        'type'       => 'text',
+        'title'      => __('OAuth Token', 'nhp-opts'),
+        'sub_desc'   => __('Obtained via the Twitter developer website.', 'nhp-opts'),
+        'class'      => 'large-text'
+      ),
+      array(
+        'id'         => 'oAuthSecret',
+        'type'       => 'text',
+        'title'      => __('OAuth Secret', 'nhp-opts'),
+        'sub_desc'   => __('Obtained via the Twitter developer website.', 'nhp-opts'),
+        'class'      => 'large-text'
+      )
+    )
+  );
+
   /******************************* Tabs *******************************/
 
   $tabs = array();
