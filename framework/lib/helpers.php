@@ -221,8 +221,10 @@ function set_image_sizes( $image_sizes = null ) {
  **/
 function post_type_labels( $singular = null, $plural = null, $prepend = null, $append = null) {
 
-	if ( !$plural ) {
+	if ( $plural === null ) {
 		$plural = $singular . 's';
+	} else {
+		$plural = $singular;
 	}
 
 	$plural = ucwords( $plural );
