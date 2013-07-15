@@ -14,7 +14,7 @@ if ( is_admin() ) {
     new JMetaBox( array(
       'id'       => 'rep_meta_box',
       'title'    => 'Page Options',
-      'desc'     => 'Page options for Brighton Digital Festival.',
+      'desc'     => '',
       'context'  => 'advanced',
       'priority' => 'high',
       'types'    => array(
