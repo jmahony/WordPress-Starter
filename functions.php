@@ -22,6 +22,8 @@ define( 'INCLUDE_JS',         true );
 /* Which persistence method */
 define( 'PERSISTENCE_METHOD', 'COOKIE' );
 
+define('JMETA_BASE_URL', get_stylesheet_directory_uri() . '/framework/lib');
+
 /* Include the framework */
 require( 'framework/init.php' );
 
