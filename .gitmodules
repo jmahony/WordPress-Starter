@@ -1,12 +1,3 @@
-[submodule "framework/lib/NHP-Theme-Options-Framework"]
-	path = framework/lib/NHP-Theme-Options-Framework
-	url = git://github.com/leemason/NHP-Theme-Options-Framework.git
-[submodule "framework/lib/CSS-Generator-for-NHP-Framework"]
-	path = framework/lib/CSS-Generator-for-NHP-Framework
-	url = git://github.com/jmahony/CSS-Generator-for-NHP-Framework.git
-[submodule "framework/lib/JMetaBox"]
-	path = framework/lib/JMetaBox
-	url = https://github.com/jmahony/JMetaBox.git
-[submodule "framework/lib/twitteroauth"]
-	path = framework/lib/twitteroauth
-	url = https://github.com/abraham/twitteroauth.git
+[submodule "bwp-framework"]
+	path = bwp-framework
+	url = https://github.com/jmahony/bwp-framework.git
