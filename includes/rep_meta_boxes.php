@@ -21,21 +21,6 @@ if ( is_admin() ) {
         'page'
       ),
       'fields' => array(
-        array(
-          'id'       => 'introText',
-          'type'     => 'textarea',
-          'label'    => 'Intro Text'
-        ),
-        array(
-          'id'       => 'introTextColor',
-          'type'     => 'color',
-          'label'    => 'Text Color'
-        ),
-        array(
-          'id'       => 'introBgColor',
-          'type'     => 'color',
-          'label'    => 'Background Color'
-        )
       )
     ) );
 
