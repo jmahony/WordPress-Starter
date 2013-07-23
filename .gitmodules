@@ -10,6 +10,3 @@
 [submodule "framework/lib/twitteroauth"]
 	path = framework/lib/twitteroauth
 	url = https://github.com/abraham/twitteroauth.git
-[submodule "framework/lib/CSS-Generator-forNHP-Framework"]
-	path = framework/lib/CSS-Generator-forNHP-Framework
-	url = https://github.com/jmahony/CSS-Generator-for-NHP-Framework.git
